@@ -10,6 +10,15 @@ clean:
 
 deploy: clean build
 	sls deploy --verbose
+deploy-dev: clean build
+	sls deploy --verbose --stage dev
+deploy-stg: clean build
+	sls deploy --verbose --stage stg
+
+remove:
+	sls remove
+remove-dev:
+	sls remove --stage dev
 
 gomodgen:
 	chmod u+x gomod.sh
