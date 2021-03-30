@@ -58,14 +58,14 @@ package:
 
 functions:
   hello:
-    # name: ${opt:stage}-hello
+    name: ${opt:stage}-hello
     handler: bin/hello
     events:
       - httpApi:
           path: /hello
           method: get
   world:
-    # name: ${opt:stage}-world
+    name: ${opt:stage}-world
     handler: bin/world
     events:
       - httpApi:
